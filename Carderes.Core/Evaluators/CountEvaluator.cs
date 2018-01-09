@@ -13,9 +13,21 @@ namespace Carderes.Core
             this.matchCount = matchCount;
         }
 
-        public List<IHandResult> Evaluate(List<ICard> hand)
+        public IHandResult Evaluate(IHand hand, IPaytable paytable)
         {
-            throw new NotImplementedException();
+            IHandResult result = new HandResult();
+
+            // Loop through each card face in hierarchy
+            for (int i = 0; i < paytable.CardHierarchy.Count; i++)
+            {
+                // Check count
+                if(hand.ContainsAtLeast(paytable.CardHierarchy[i], matchCount))
+                {
+                    result.Matched = true;
+                }
+            }
+
+            return result;
         }
     }
 }

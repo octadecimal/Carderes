@@ -6,6 +6,6 @@ namespace Carderes.Core
 {
     public interface IEvaluator
     {
-        List<IHandResult> Evaluate(List<ICard> hand);
+        IHandResult Evaluate(IHand hand, IPaytable paytable);
     }
 }

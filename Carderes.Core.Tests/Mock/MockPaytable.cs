@@ -27,10 +27,6 @@ namespace Carderes.Core.Tests.Mock
 
             // Set card hierarchy
             SetCardHierarchy(hierarchies);
-
-            // Setup scenarios
-            AddScenario("4 of a kind", new int[] { 25, 50, 75, 100, 125 }, new CountEvaluator(4));
-            AddScenario("3 of a kind", new int[] { 25, 50, 75, 100, 125 }, new CountEvaluator(3));
         }
     }
 }

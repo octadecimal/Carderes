@@ -53,6 +53,7 @@
     <Compile Include="Mock\MockPaytable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\CardTests.cs" />
+    <Compile Include="Types\HandTests.cs" />
     <Compile Include="Types\PaytableTests.cs" />
   </ItemGroup>
   <ItemGroup>
